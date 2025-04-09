@@ -20,4 +20,6 @@ Devuelve un **número** que representa el número de iteraciones que el número 
 
 #### Ejemplo:
 ```js
-collatz(24, false); // Devuelve 11
+collatz(24, true); // Devuelve 11
+collatz(24, false); // El número 24 necesitó de 11 iteraciones e imprime el numero ingresado y cada operacion que pasa hasta llegar a la secuencia 1,4,2.
+iteracionesCollatz(11)//El primer número que necesita 11 iteraciones es el 24.
