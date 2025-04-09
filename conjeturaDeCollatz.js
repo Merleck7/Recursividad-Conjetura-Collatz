@@ -36,7 +36,6 @@ function collatz (number, debug = true){
 function iteracionesCollatz(inx) {
   let index = 1; 
   let newNumber = 0;
-  cont = 1;
   while (newNumber !== inx) {
         newNumber = collatz(index, true);
         index++;
@@ -45,4 +44,4 @@ function iteracionesCollatz(inx) {
 }
 
 console.log(collatz(24,false));
-console.log(iteracionesCollatz(42));
+console.log(iteracionesCollatz(11));
