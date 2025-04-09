@@ -11,6 +11,8 @@ function collatz (number, debug = true){
     if (cont===1) {
         numOrgn = number;
         collatzArrNew = [];
+        if (!debug) console.log(number);
+        
     }
     cont++;
     if (number%2===0) {
@@ -25,7 +27,7 @@ function collatz (number, debug = true){
       }
     if (arraysIguales(collatzArrNew, collatzArr)) {
       const resultado = !debug ? `El número ${numOrgn} necesitó de ${cont} interacciones`: cont;
-      cont = 0;
+      cont = 1;
       return resultado;
       }
       return collatz(number, debug);
@@ -34,12 +36,13 @@ function collatz (number, debug = true){
 function interaccionesCollatz(inx) {
   let index = 1; 
   let newNumber = 0;
+  cont = 1;
   while (newNumber !== inx) {
         newNumber = collatz(index, true);
         index++;
   }
-  return `El primer número que necesita ${inx} interacciones es el ${index}.`;
+  return `El primer número que necesita ${inx} interacciones es el ${index-1}.`;
 }
 
 console.log(collatz(24,false));
-console.log(interaccionesCollatz(10));
+console.log(interaccionesCollatz(42));
