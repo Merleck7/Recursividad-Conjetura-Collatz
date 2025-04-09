@@ -4,12 +4,12 @@ Este programa implementa la **Conjetura de Collatz**, un famoso problema matemá
 
 El programa tiene dos funciones principales:
 1. **`collatz(number, debug)`**: Calcula el número de iteraciones necesarias para llegar a "1,4,2" siguiendo las reglas de la conjetura de Collatz, y también permite ver el proceso si se activa la opción de depuración.
-2. **`interaccionesCollatz(inx)`**: Devuelve el primer número que necesita un número específico de interacciones para llegar a "1,4,2" según la conjetura de Collatz.
+2. **`iteracionesCollatz(inx)`**: Devuelve el primer número que necesita un número específico de iteraciones para llegar a "1,4,2" según la conjetura de Collatz.
 
 ## Funciones
 
 ### `collatz(number, debug = true)`
-Calcula las interacciones de un número utilizando la Conjetura de Collatz.
+Calcula las iteraciones de un número utilizando la Conjetura de Collatz.
 
 #### Parámetros:
 - `number` (número entero): El número con el cual comenzar el proceso de Collatz.
