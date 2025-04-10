@@ -1,4 +1,4 @@
-let cont = 1;
+let cont = 0;
 let numOrgn = null;
 const collatzArr = [1, 4, 2];
 let collatzArrNew = [];
@@ -8,11 +8,10 @@ function arraysIguales(a, b) {
     return ordenadoA.every((val, i) => val === ordenadoB[i]);
   }
 function collatz (number, debug = true){
-    if (cont===1) {
+    if (cont===0) {
         numOrgn = number;
         collatzArrNew = [];
         if (!debug) console.log(number);
-        
     }
     cont++;
     if (number%2===0) {
@@ -27,7 +26,7 @@ function collatz (number, debug = true){
       }
     if (arraysIguales(collatzArrNew, collatzArr)) {
       const resultado = !debug ? `El número ${numOrgn} necesitó de ${cont} iteraciones`: cont;
-      cont = 1;
+      cont = 0;
       return resultado;
       }
       return collatz(number, debug);
@@ -43,5 +42,5 @@ function iteracionesCollatz(inx) {
   return `El primer número que necesita ${inx} iteraciones es el ${index-1}.`;
 }
 
-console.log(collatz(24,false));
-console.log(iteracionesCollatz(11));
+console.log(collatz(27,false));
+console.log(iteracionesCollatz(111));
